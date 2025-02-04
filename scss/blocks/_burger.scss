@@ -4,16 +4,23 @@
   height: 32px;
   justify-content: center;
   width: 32px;
-  transition: $transition300;
 
   .header--open & {
     &__menu {
       background-color: transparent;
-
+      
       &::after {
         background-color: $color-white;
         top: 0;
         transform: translate(-50%, 0) rotate(45deg);
+        transition: background-color $transition300, $transition300, transform $transition300 .3s;
+      }
+
+      &::before {
+        background-color: $color-white;
+        top: 0;
+        transform: translate(-50%, 0) rotate(-45deg);
+        transition: background-color $transition300, top $transition300, transform $transition300 .3s;
       }
     }
   }
@@ -42,6 +49,11 @@
 
     &::after {
       top: 8px;
+      transition: background-color $transition300, top $transition300 .2s, transform $transition300;
+    }
+
+    &::before {
+      transition: background-color $transition300, top $transition300 .2s, transform $transition300;
     }
   }
 }

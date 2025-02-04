@@ -7,6 +7,7 @@
   left: 0;
   z-index: 20;
   background-color: $color-white;
+  transition: background-color $transition300, border-color $transition300; 
 
   $root: &;
 
@@ -55,6 +56,7 @@
     svg {
       height: 60px;
       width: 170px;
+      transition: color $transition300;
     }
   }
 
@@ -68,6 +70,7 @@
     line-height: 22px;
     margin: 0 30px 0 auto;
     white-space: nowrap;
+    transition: color $transition300;
 
     @media (max-width: 1150px) {
       font-size: 16px;
@@ -120,6 +123,7 @@
     svg {
       height: 32px;
       width: 32px;
+      transition: color $transition300;
 
       @media (max-width: 1150px) {
         height: 28px;
