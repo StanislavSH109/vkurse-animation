@@ -1034,9 +1034,15 @@ a {
   height: 32px;
   justify-content: center;
   width: 32px;
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
 }
 .header--open .burger__menu {
   background-color: transparent;
+}
+.header--open .burger__menu::after {
+  background-color: #ffffff;
+  top: 0;
+  transform: translate(-50%, 0) rotate(45deg);
 }
 .burger__menu {
   background-color: #29539B;
