@@ -677,12 +677,18 @@ a {
   justify-content: center;
   cursor: pointer;
 }
+.main-nav__button-more:hover + .main-nav__sublist {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
 @media (max-width: 1023px) {
   .main-nav__button-more {
     display: none;
   }
 }
 .main-nav__sublist {
+  pointer-events: none;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 0 10px 0 rgba(41, 83, 155, 0.4);
@@ -696,6 +702,8 @@ a {
   padding: 12px 24px;
   position: absolute;
   top: calc(100% + 12px);
+  opacity: 0;
+  transform: translateY(-10%);
 }
 @media (max-width: 1023px) {
   .main-nav__sublist {
@@ -1333,6 +1341,4 @@ a {
   font-size: 12px;
   line-height: 16px;
   color: #ffffff;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

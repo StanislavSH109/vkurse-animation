@@ -94,6 +94,16 @@
 
   &__item {
     position: relative;
+
+    &--submenu {
+      &:hover {
+        .main-nav__sublist {
+          opacity: 0;
+          transform:translateY(0);
+          pointer-events: all;
+        }
+      }
+    }
   }
 
   &__link {
@@ -130,6 +140,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    }
 
     @include vp-1023 {
       display: none;
@@ -137,6 +148,7 @@
   }
 
   &__sublist {
+    pointer-events: none;
     background-color: $color-white;
     border-radius: 12px;
     box-shadow: 0 0 10px 0 #29539B66;
@@ -150,6 +162,8 @@
     padding: 12px 24px;
     position: absolute;
     top: calc(100% + 12px);
+    opacity: 0;
+    transform: translateY(-10%);
 
     @include vp-1023 {
       position: relative;
