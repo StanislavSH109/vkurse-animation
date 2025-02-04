@@ -704,6 +704,7 @@ a {
   top: calc(100% + 12px);
   opacity: 0;
   transform: translateY(-10%);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
 }
 @media (max-width: 1023px) {
   .main-nav__sublist {
@@ -720,7 +721,6 @@ a {
   position: absolute;
   left: 0;
   top: -12px;
-  background-color: black;
 }
 .main-nav__social {
   display: none;
@@ -1034,6 +1034,9 @@ a {
   height: 32px;
   justify-content: center;
   width: 32px;
+}
+.header--open .burger__menu {
+  background-color: transparent;
 }
 .burger__menu {
   background-color: #29539B;

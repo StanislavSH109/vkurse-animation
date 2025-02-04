@@ -164,6 +164,7 @@
   top: calc(100% + 12px);
   opacity: 0;
   transform: translateY(-10%);
+  transition: $transition300;
 
   @include vp-1023 {
     position: relative;
@@ -179,7 +180,6 @@
     position: absolute;
     left: 0;
     top: -12px;
-    background-color: black;
   }
 }
 

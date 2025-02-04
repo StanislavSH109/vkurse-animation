@@ -4,6 +4,20 @@
   height: 32px;
   justify-content: center;
   width: 32px;
+  transition: $transition300;
+
+  .header--open & {
+    &__menu {
+      background-color: transparent;
+
+      &::after {
+        background-color: $color-white;
+        top: 0;
+        transform: translate(-50%, 0) rotate(45deg);
+      }
+    }
+  }
+
 
   &__menu {
     background-color: $color-endeavour;
