@@ -98,8 +98,8 @@
     &--submenu {
       &:hover {
         .main-nav__sublist {
-          opacity: 0;
-          transform:translateY(0);
+          opacity: 1;
+          transform: translateY(0);
           pointer-events: all;
         }
       }
@@ -140,78 +140,88 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    }
-
-    @include vp-1023 {
-      display: none;
-    }
   }
 
-  &__sublist {
-    pointer-events: none;
-    background-color: $color-white;
-    border-radius: 12px;
-    box-shadow: 0 0 10px 0 #29539B66;
+  @include vp-1023 {
+    display: none;
+  }
+
+
+&__sublist {
+  pointer-events: none;
+  background-color: $color-white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 0 #29539B66;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  min-width: 160px;
+  padding: 12px 24px;
+  position: absolute;
+  top: calc(100% + 12px);
+  opacity: 0;
+  transform: translateY(-10%);
+
+  @include vp-1023 {
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+    gap: 40px;
+  }
+
+  &::before {
+    content: "";
+    height: 12px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -12px;
+    background-color: black;
+  }
+}
+
+&__social {
+  display: none;
+
+  @include vp-1023 {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    left: 0;
+    gap: 40px;
     list-style: none;
-    margin: 0;
-    min-width: 160px;
-    padding: 12px 24px;
-    position: absolute;
-    top: calc(100% + 12px);
-    opacity: 0;
-    transform: translateY(-10%);
-
-    @include vp-1023 {
-      position: relative;
-      background-color: transparent;
-      padding: 0;
-      gap: 40px;
-    }
+    margin: auto 0 20px;
+    padding: 0;
+    position: fixed;
+    right: 40px;
+    top: calc(81px + 50px);
   }
 
-  &__social {
-    display: none;
-
-    @include vp-1023 {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      list-style: none;
-      margin: auto 0 20px;
-      padding: 0;
-      position: fixed;
-      right: 40px;
-      top: calc(81px + 50px);
-    }
-
-    @include vp-767 {
-      flex-direction: row;
-      justify-content: center;
-      position: relative;
-      right: auto;
-      top: auto;
-    }
+  @include vp-767 {
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    right: auto;
+    top: auto;
   }
+}
 
-  &__social-link {
+&__social-link {
+  display: flex;
+}
+
+&__phone {
+  display: none;
+
+  @include vp-767 {
+    align-items: center;
+    color: $color-white;
     display: flex;
+    font-size: 18px;
+    gap: 10px;
+    justify-content: center;
+    line-height: 22px;
   }
-
-  &__phone {
-    display: none;
-
-    @include vp-767 {
-      align-items: center;
-      color: $color-white;
-      display: flex;
-      font-size: 18px;
-      gap: 10px;
-      justify-content: center;
-      line-height: 22px;
-    }
-  }
+}
 }
