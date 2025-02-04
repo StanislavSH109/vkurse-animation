@@ -12,17 +12,17 @@
 <img src="assets/ui-loader.png" alt="шаблон ui-kit" align="center">
 </p>
 
-<h2>Desktop - 1440 :desktop_computer:/h2>
+<h2 align="center">Desktop - 1440 :desktop_computer:/h2>
 <p align="center"> 
 <img src="assets/ui-desktop.png" alt="шаблон ui-kit" align="center">
 </p>
 
-<h2>Tablet - 768  :computer:/h2>
+<h2 align="center">Tablet - 768  :computer:/h2>
 <p align="center"> 
 <img src="assets/ui-tablet.png" alt="шаблон ui-kit" align="center">
 </p>
 
-<h2>Menu :hamburger:</h2>
+<h2 align="center">Menu :hamburger:</h2>
 <p align="center"> 
 <img src="assets/ui-menu.png" alt="шаблон ui-kit" align="center">
 </p>
